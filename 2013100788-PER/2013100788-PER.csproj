@@ -54,5 +54,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2013100788-ENT\2013100788-ENT1.csproj">
+      <Project>{3bc73e3d-60dc-401d-b5e6-a475c294e07b}</Project>
+      <Name>2013100788-ENT1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
