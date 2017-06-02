@@ -47,18 +47,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EntityTypeConfigurations\AdministradorEquipoConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\AdministradorLineaConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\CentroAtencionConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\ClienteConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\ContratoConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\DireccionConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\EquipoCelularConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\EstadoEvaluacion.cs" />
+    <Compile Include="EntityTypeConfigurations\Evaluacion.cs" />
+    <Compile Include="EntityTypeConfigurations\LineaTelefonica.cs" />
+    <Compile Include="EntityTypeConfigurations\Trabajador.cs" />
+    <Compile Include="EntityTypeConfigurations\Ubigeo.cs" />
+    <Compile Include="EntityTypeConfigurations\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdministradorEquipoRepository.cs" />
+    <Compile Include="Repositories\AdministradorLineaRepository.cs" />
+    <Compile Include="Repositories\CentroAtencionRepository.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\ContratoRepository.cs" />
+    <Compile Include="Repositories\DireccionRepository.cs" />
+    <Compile Include="Repositories\EquipoCelularRepository.cs" />
+    <Compile Include="Repositories\EstadoEvaluacionRepository.cs" />
+    <Compile Include="Repositories\EvaluacionRepository.cs" />
+    <Compile Include="Repositories\LineaTelefonicaRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\TrabajadorRepository.cs" />
+    <Compile Include="Repositories\UbigeoRepository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
+    <Compile Include="Repositories\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\2013100788-ENT\2013100788-ENT1.csproj">
-      <Project>{3bc73e3d-60dc-401d-b5e6-a475c294e07b}</Project>
-      <Name>2013100788-ENT1</Name>
+    <ProjectReference Include="..\2013100788-ENT\2013100788-ENT.csproj">
+      <Project>{0bc82b54-7db0-4d30-97ce-d495ab2955e6}</Project>
+      <Name>2013100788-ENT</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
