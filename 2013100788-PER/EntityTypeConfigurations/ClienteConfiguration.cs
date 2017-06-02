@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2013100788_PER
+namespace _2013100788_PER.EntityTypeConfigurations
 {
-    public class Class1
+    class ClienteConfiguration
     {
     }
 }
