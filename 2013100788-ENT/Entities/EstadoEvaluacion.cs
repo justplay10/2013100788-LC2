@@ -8,5 +8,8 @@ namespace _2013100788_ENT.Entities
 {
     class EstadoEvaluacion
     {
+        public int EstEvaId { get; set; }
+        public string desc { get; set; }
+        public ICollection<Evaluacion> Evaluacions { get; set; }
     }
 }

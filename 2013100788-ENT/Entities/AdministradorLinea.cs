@@ -8,5 +8,9 @@ namespace _2013100788_ENT.Entities
 {
     class AdministradorLinea
     {
+        public int AdmiLinId { get; set; }
+        public string desc { get; set; }
+        public LineaTelefonica LineaTelefonica { get; set; }
+        public int LinTelfId { get; set; }
     }
 }

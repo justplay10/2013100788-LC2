@@ -8,5 +8,9 @@ namespace _2013100788_ENT.Entities
 {
     class Trabajador
     {
+        public int TrabaId { get; set; }
+        public string desc { get; set; }
+        public TipoTrabajador TipoTrabajador { get; set; }
+
     }
 }
