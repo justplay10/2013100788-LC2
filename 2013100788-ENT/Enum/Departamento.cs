@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2013100788_ENT.Enum
+namespace _2013100788_ENT.Entities
 {
-    class Departamento
+    public enum Departamento :byte
     {
+        Lima=1
     }
 }

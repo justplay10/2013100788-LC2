@@ -26,6 +26,8 @@ namespace _2013100788_ENT.Entities
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
         public ICollection<Venta> Ventas { get; set; }
+        public int CenAteId { get; set; }
+        public CentroAtencion CentroAtencion { get; set; }
         public Evaluacion()
         {
             Ventas = new Collection<Venta>();

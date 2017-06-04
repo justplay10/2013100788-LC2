@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2013100788_ENT.Enum
+namespace _2013100788_ENT.Entities
 {
-    class TipoPago
+    public enum TipoPago :byte
     {
+        efectivo=1,
+        tarjeta=2
     }
 }
