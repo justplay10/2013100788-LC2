@@ -62,8 +62,7 @@
     <Compile Include="Enum\TipoPago.cs" />
     <Compile Include="Enum\TipoPlan.cs" />
     <Compile Include="Enum\TipoTrabajador.cs" />
-    <Compile Include="IRepositories\AdministradorLineaRepository.cs" />
-    <Compile Include="IRepositories\ClienteRepository.cs" />
+    <Compile Include="IRepositories\IAdministradorLineaRepository.cs" />
     <Compile Include="IRepositories\IAdministradorEquipoRepository.cs" />
     <Compile Include="IRepositories\ICentroAtencionRepository.cs" />
     <Compile Include="IRepositories\IClienteRepository.cs" />
