@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2013100788_ENT.Entities
 {
-    class Venta
+    public class Venta
     {
         public int VentaId { get; set; }
         public string desc { get; set; }

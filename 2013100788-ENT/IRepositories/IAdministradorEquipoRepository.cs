@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _2013100788_ENT.IRepositories
 {
-    public interface IAdministradorEquipoRepository: IRepository<AdministradorEquipo>
+    public interface IAdministradorEquipoRepository : IRepository <AdministradorEquipo>
     {
 
     }

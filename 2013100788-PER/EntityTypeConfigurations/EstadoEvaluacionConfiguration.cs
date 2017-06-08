@@ -1,23 +1,22 @@
 ﻿
-
 using _2013100788_ENT.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace _2013100788_PER.EntityTypeConfigurations
 {
-    public class AdministradorLineaConfiguration : EntityTypeConfiguration<AdministradorLinea>
+    public class EstadoEvaluacionConfiguration : EntityTypeConfiguration<EstadoEvaluacion>
     {
-        public AdministradorLineaConfiguration()
+        public EstadoEvaluacionConfiguration()
         {
-            ToTable("AdministradorLineas");
-            HasKey(a => a.AdmiLinId);
-            Property(a => a.AdmiLinId)
+            ToTable("EstadoEvaluacions");
+            HasKey(e => e.EstEvaId);
+            Property(e => e.EstEvaId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(a => a.desc)
+            Property(e => e.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            
+            HasRequired(e => e.Evaluacions);
         }
     }
 }

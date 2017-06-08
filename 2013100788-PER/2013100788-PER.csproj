@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LineasNuevasContext.cs" />
     <Compile Include="EntityTypeConfigurations\AdministradorEquipoConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\AdministradorLineaConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\CentroAtencionConfiguration.cs" />
@@ -54,12 +55,12 @@
     <Compile Include="EntityTypeConfigurations\ContratoConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\DireccionConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\EquipoCelularConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\EstadoEvaluacion.cs" />
-    <Compile Include="EntityTypeConfigurations\Evaluacion.cs" />
-    <Compile Include="EntityTypeConfigurations\LineaTelefonica.cs" />
-    <Compile Include="EntityTypeConfigurations\Trabajador.cs" />
-    <Compile Include="EntityTypeConfigurations\Ubigeo.cs" />
-    <Compile Include="EntityTypeConfigurations\Venta.cs" />
+    <Compile Include="EntityTypeConfigurations\EstadoEvaluacionConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\EvaluacionConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\LineaTelefonicaConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\TrabajadorConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\UbigeoConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\VentaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdministradorEquipoRepository.cs" />
     <Compile Include="Repositories\AdministradorLineaRepository.cs" />
@@ -87,6 +88,5 @@
       <Name>2013100788-ENT</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,18 +4,17 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace _2013100788_PER.EntityTypeConfigurations
 {
-    public class DireccionConfiguration : EntityTypeConfiguration<Direccion>
+    public class TrabajadorConfiguration : EntityTypeConfiguration<Trabajador>
     {
-        public DireccionConfiguration()
+        public TrabajadorConfiguration()
         {
-            ToTable("Direccions");
-            HasKey(d => d.DirId);
-            Property(d => d.DirId)
+            ToTable("Trabajadors");
+            HasKey(t => t.TrabaId);
+            Property(t => t.TrabaId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(d => d.desc)
+            Property(t => t.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            HasRequired(d => d.CentroAtencions);
         }
     }
 }

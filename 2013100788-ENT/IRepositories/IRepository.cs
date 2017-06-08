@@ -9,12 +9,21 @@ namespace _2013100788_ENT.IRepositories
 {
     public interface IRepository<TEntity> where TEntity : class
     {
+
+        IQueryable<TEntity> GetEntity();
+
+        //CREATES
         void Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);
-        TEntity Get(int? Id);
+
+        //READS
+        TEntity Get(int? id);
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
-        void Delete(TEntity entity);
-        void DeleteRange(IEnumerable<TEntity> entities);
+
+        //DELETES
+        void Remove(TEntity entity);
+        void RemoveRange(IEnumerable<TEntity> entities);
+
     }
 }

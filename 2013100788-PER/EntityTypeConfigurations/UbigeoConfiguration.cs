@@ -4,18 +4,18 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace _2013100788_PER.EntityTypeConfigurations
 {
-    public class DireccionConfiguration : EntityTypeConfiguration<Direccion>
+    public class UbigeoConfiguration : EntityTypeConfiguration<Ubigeo>
     {
-        public DireccionConfiguration()
+        public UbigeoConfiguration()
         {
-            ToTable("Direccions");
-            HasKey(d => d.DirId);
-            Property(d => d.DirId)
+            ToTable("Ubigeos");
+            HasKey(u => u.UbigeoId);
+            Property(u => u.UbigeoId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(d => d.desc)
+            Property(u => u.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            HasRequired(d => d.CentroAtencions);
+            HasRequired(u => u.Direccions);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2013100788_ENT.Entities
 {
-    class Cliente
+    public class Cliente
     {
         public int ClienteId { get; set; }
         public string Nombre { get; set; }
