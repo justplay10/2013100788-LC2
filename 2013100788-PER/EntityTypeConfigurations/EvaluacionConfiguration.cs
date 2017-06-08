@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public EvaluacionConfiguration()
         {
-            ToTable("Evaluacions");
-            HasKey(e => e.EvalId);
-            Property(e => e.EvalId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Evaluacions")
+            .HasKey(e => e.EvalId);
+            //Property(e => e.EvalId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(e => e.desc)
                 .IsRequired()
                 .HasMaxLength(255);

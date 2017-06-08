@@ -11,7 +11,7 @@ namespace _2013100788_ENT.Entities
         public int AdmiEquipId { get; set; }
         public string desc { get; set; }
         public int EquipCelId { get; set; }
-        public EquipoCelular EquipoCelular{ get; set; }
+        public EquipoCelular EquipoCelular { get; set; }
 
     }
 }

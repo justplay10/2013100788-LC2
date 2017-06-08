@@ -9,8 +9,8 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public EstadoEvaluacionConfiguration()
         {
-            ToTable("EstadoEvaluacions");
-            HasKey(e => e.EstEvaId);
+            ToTable("EstadoEvaluacions")
+            .HasKey(e => e.EstEvaId);
             Property(e => e.EstEvaId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(e => e.desc)

@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public DireccionConfiguration()
         {
-            ToTable("Direccions");
-            HasKey(d => d.DirId);
-            Property(d => d.DirId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Direccions")
+            .HasKey(d => d.DirId);
+            //Property(d => d.DirId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(d => d.desc)
                 .IsRequired()
                 .HasMaxLength(255);

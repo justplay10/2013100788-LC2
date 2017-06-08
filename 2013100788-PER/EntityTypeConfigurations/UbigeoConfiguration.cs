@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public UbigeoConfiguration()
         {
-            ToTable("Ubigeos");
-            HasKey(u => u.UbigeoId);
-            Property(u => u.UbigeoId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Ubigeos")
+            .HasKey(u => u.UbigeoId);
+            //Property(u => u.UbigeoId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(u => u.desc)
                 .IsRequired()
                 .HasMaxLength(255);

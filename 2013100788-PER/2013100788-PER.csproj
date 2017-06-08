@@ -61,6 +61,11 @@
     <Compile Include="EntityTypeConfigurations\TrabajadorConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\UbigeoConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\VentaConfiguration.cs" />
+    <Compile Include="Migrations\201706080834000_lul.cs" />
+    <Compile Include="Migrations\201706080834000_lul.Designer.cs">
+      <DependentUpon>201706080834000_lul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdministradorEquipoRepository.cs" />
     <Compile Include="Repositories\AdministradorLineaRepository.cs" />
@@ -87,6 +92,11 @@
       <Project>{0bc82b54-7db0-4d30-97ce-d495ab2955e6}</Project>
       <Name>2013100788-ENT</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706080834000_lul.resx">
+      <DependentUpon>201706080834000_lul.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

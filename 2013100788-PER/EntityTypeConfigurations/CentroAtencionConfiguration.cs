@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public CentroAtencionConfiguration()
         {
-            ToTable("CentroAtencions");
-            HasKey(c => c.CenAteId);
-            Property(c => c.CenAteId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("CentroAtencions")
+            .HasKey(c => c.CenAteId);
+            //Property(c => c.CenAteId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.desc)
                 .IsRequired()
                 .HasMaxLength(255);

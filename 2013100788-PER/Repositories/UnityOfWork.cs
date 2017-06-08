@@ -15,7 +15,7 @@ namespace _2013100788_PER.Repositories
 
         public IAdministradorLineaRepository AdministradorLineas { get; private set; }
 
-        public ICentroAtencionRepository CentroAtencions { get; private set; }
+        public ICentroAtencionRepository CentroAtencion { get; private set; }
 
         public IClienteRepository Clientes { get; private set; }
         public IContratoRepository Contratos { get; private set; }
@@ -36,6 +36,7 @@ namespace _2013100788_PER.Repositories
 
         public IVentaRepository Ventas { get; private set; }
 
+
         public UnityOfWork()
         {
 
@@ -46,7 +47,7 @@ namespace _2013100788_PER.Repositories
 
             AdministradorEquipos = new AdministradorEquipoRepository(_Context);
             AdministradorLineas = new AdministradorLineaRepository(_Context);
-            CentroAtencions = new CentroAtencionRepository(_Context);
+            CentroAtencion = new CentroAtencionRepository(_Context);
             Clientes = new ClienteRepository(_Context);
             Contratos = new ContratoRepository(_Context);
             Direccions = new DireccionRepository(_Context);
@@ -62,7 +63,7 @@ namespace _2013100788_PER.Repositories
         {
             _Context.Dispose();
         }
-        public int SavChanges()
+        public int SaveChanges()
         {
             return _Context.SaveChanges();
         }

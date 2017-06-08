@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public ContratoConfiguration()
         {
-            ToTable("Contratos");
-            HasKey(c => c.ContratoId);
-            Property(c => c.ContratoId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Contratos")
+            .HasKey(c => c.ContratoId);
+            //Property(c => c.ContratoId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.desc)
                 .IsRequired()
                 .HasMaxLength(255);

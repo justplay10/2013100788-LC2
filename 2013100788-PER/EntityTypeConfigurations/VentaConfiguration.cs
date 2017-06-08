@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public VentaConfiguration()
         {
-            ToTable("Ventas");
-            HasKey(v => v.VentaId);
-            Property(v => v.VentaId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Ventas")
+            .HasKey(v => v.VentaId);
+            //Property(v => v.VentaId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(v => v.desc)
                 .IsRequired()
                 .HasMaxLength(255);

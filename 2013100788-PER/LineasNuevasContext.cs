@@ -25,27 +25,28 @@ namespace _2013100788_PER
         public DbSet<Trabajador> Trabajadors { get; set; }
         public DbSet<Ubigeo> Ubigeos { get; set; }
         public DbSet<Venta> Ventas { get; set; }
-    }
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        modelBuilder.Configurations.Add(new AdministradorEquipoConfiguration());
-        modelBuilder.Configurations.Add(new AdministradorLineaConfiguration());
-        modelBuilder.Configurations.Add(new CentroAtencionConfiguration());
-        modelBuilder.Configurations.Add(new ClienteConfiguration());
-        modelBuilder.Configurations.Add(new ContratoConfiguration());
-        modelBuilder.Configurations.Add(new DireccionConfiguration());
-        modelBuilder.Configurations.Add(new EquipoCelularConfiguration());
-        modelBuilder.Configurations.Add(new EstadoEvaluacionConfiguration());
-        modelBuilder.Configurations.Add(new EvaluacionConfiguration());
-        modelBuilder.Configurations.Add(new LineaTelefonicaConfiguration());
-        modelBuilder.Configurations.Add(new TrabajadorConfiguration());
-        modelBuilder.Configurations.Add(new UbigeoConfiguration());
-        modelBuilder.Configurations.Add(new VentaConfiguration());
 
-        Database.SetInitializer<LineasNuevasContext>(null);
-        base.OnModelCreating(modelBuilder);
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new AdministradorEquipoConfiguration());
+            modelBuilder.Configurations.Add(new AdministradorLineaConfiguration());
+            modelBuilder.Configurations.Add(new CentroAtencionConfiguration());
+            modelBuilder.Configurations.Add(new ClienteConfiguration());
+            modelBuilder.Configurations.Add(new ContratoConfiguration());
+            modelBuilder.Configurations.Add(new DireccionConfiguration());
+            modelBuilder.Configurations.Add(new EquipoCelularConfiguration());
+            modelBuilder.Configurations.Add(new EstadoEvaluacionConfiguration());
+            modelBuilder.Configurations.Add(new EvaluacionConfiguration());
+            modelBuilder.Configurations.Add(new LineaTelefonicaConfiguration());
+            modelBuilder.Configurations.Add(new TrabajadorConfiguration());
+            modelBuilder.Configurations.Add(new UbigeoConfiguration());
+            modelBuilder.Configurations.Add(new VentaConfiguration());
+
+            Database.SetInitializer<LineasNuevasContext>(null);
+            base.OnModelCreating(modelBuilder);
 
 
 
+        }
     }
 }

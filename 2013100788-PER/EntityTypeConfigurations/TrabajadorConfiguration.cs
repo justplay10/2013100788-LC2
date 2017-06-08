@@ -8,10 +8,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public TrabajadorConfiguration()
         {
-            ToTable("Trabajadors");
-            HasKey(t => t.TrabaId);
-            Property(t => t.TrabaId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("Trabajadors")
+            .HasKey(t => t.TrabaId);
+            //Property(t => t.TrabaId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(t => t.desc)
                 .IsRequired()
                 .HasMaxLength(255);

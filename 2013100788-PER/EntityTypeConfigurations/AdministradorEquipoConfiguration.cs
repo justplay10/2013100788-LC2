@@ -1,6 +1,10 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using System.ComponentModel.DataAnnotations.Schema;
 using _2013100788_ENT.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace _2013100788_PER.EntityTypeConfigurations
 {
@@ -8,10 +12,8 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public AdministradorEquipoConfiguration()
         {
-            ToTable("AdministradorEquipos");
-            HasKey(a => a.AdmiEquipId);
-            Property(a => a.AdmiEquipId)
-            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("AdministradorEquipos")
+            .HasKey(a => a.AdmiEquipId);
 
             Property(a => a.desc)
                 .IsRequired()

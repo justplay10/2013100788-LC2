@@ -11,10 +11,10 @@ namespace _2013100788_PER.EntityTypeConfigurations
     {
         public LineaTelefonicaConfiguration()
         {
-            ToTable("LineaTelefonicas");
-            HasKey(l => l.LinTelfId);
-            Property(l => l.LinTelfId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            ToTable("LineaTelefonicas")
+           .HasKey(l => l.LinTelfId);
+            //Property(l => l.LinTelfId)
+            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(l => l.desc)
                 .IsRequired()
                 .HasMaxLength(255);
