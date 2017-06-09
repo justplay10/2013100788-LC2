@@ -1,0 +1,118 @@
+﻿@model IEnumerable<_2013100788_ENT.Entities.Evaluacion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CentroAtencion.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EquipoCelular.descrip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoEvaluacion.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineaTelefonica.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trabajador.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ventas.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EquipCelId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPlan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinTelfId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstEvaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CentroAtencion.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquipoCelular.descrip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoEvaluacion.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineaTelefonica.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trabajador.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ventas.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EquipCelId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPlan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LinTelfId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstEvaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEvaluacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClienteId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EvalId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EvalId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EvalId })
+        </td>
+    </tr>
+}
+
+</table>

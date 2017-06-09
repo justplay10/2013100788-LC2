@@ -22,8 +22,8 @@ namespace _2013100788_ENT.IRepositories
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
         //DELETES
-        void Remove(TEntity entity);
-        void RemoveRange(IEnumerable<TEntity> entities);
+        void Delete(TEntity entity);
+        void DeleteRange(IEnumerable<TEntity> entities);
 
     }
 }

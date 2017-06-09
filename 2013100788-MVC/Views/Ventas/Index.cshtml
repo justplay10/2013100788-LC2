@@ -1,0 +1,88 @@
+﻿@model IEnumerable<_2013100788_ENT.Entities.Venta>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CentroAtencion.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contrato.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluacion.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineaTelefonica.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EvalId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContratoId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CentroAtencion.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contrato.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evaluacion.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineaTelefonica.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EvalId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClienteId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContratoId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VentaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VentaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VentaId })
+        </td>
+    </tr>
+}
+
+</table>

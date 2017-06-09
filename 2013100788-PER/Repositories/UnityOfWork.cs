@@ -11,11 +11,13 @@ namespace _2013100788_PER.Repositories
 
     {
         private readonly LineasNuevasContext _Context;
+        private static UnityOfWork _Instance;
+        private static readonly object _Lock = new object();
         public IAdministradorEquipoRepository AdministradorEquipos { get; private set; }
 
         public IAdministradorLineaRepository AdministradorLineas { get; private set; }
 
-        public ICentroAtencionRepository CentroAtencion { get; private set; }
+        public ICentroAtencionRepository CentroAtencions { get; private set; }
 
         public IClienteRepository Clientes { get; private set; }
         public IContratoRepository Contratos { get; private set; }
@@ -37,17 +39,13 @@ namespace _2013100788_PER.Repositories
         public IVentaRepository Ventas { get; private set; }
 
 
-        public UnityOfWork()
+        private UnityOfWork()
         {
-
-        }
-        public UnityOfWork(LineasNuevasContext context)
-        {
-            _Context = context;
+            _Context = new LineasNuevasContext();
 
             AdministradorEquipos = new AdministradorEquipoRepository(_Context);
             AdministradorLineas = new AdministradorLineaRepository(_Context);
-            CentroAtencion = new CentroAtencionRepository(_Context);
+            CentroAtencions = new CentroAtencionRepository(_Context);
             Clientes = new ClienteRepository(_Context);
             Contratos = new ContratoRepository(_Context);
             Direccions = new DireccionRepository(_Context);
@@ -58,6 +56,19 @@ namespace _2013100788_PER.Repositories
             Trabajadors = new TrabajadorRepository(_Context);
             Ubigeos = new UbigeoRepository(_Context);
             Ventas = new VentaRepository(_Context);
+        }
+
+        public static UnityOfWork Instance
+        {
+            get
+            {
+                lock (_Lock)
+                {
+                    if (_Instance == null)
+                        _Instance = new UnityOfWork();
+                }
+                return _Instance;
+            }
         }
         public void Dispose()
         {

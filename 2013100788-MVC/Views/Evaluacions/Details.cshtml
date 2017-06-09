@@ -1,0 +1,139 @@
+﻿@model _2013100788_ENT.Entities.Evaluacion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evaluacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CentroAtencion.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CentroAtencion.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipoCelular.descrip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipoCelular.descrip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoEvaluacion.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoEvaluacion.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaTelefonica.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaTelefonica.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trabajador.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trabajador.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ventas.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ventas.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipCelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipCelId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinTelfId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinTelfId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstEvaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstEvaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEvaluacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEvaluacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClienteId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EvalId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

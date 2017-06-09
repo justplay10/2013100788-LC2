@@ -10,7 +10,7 @@ namespace _2013100788_ENT.IRepositories
     {
         IAdministradorEquipoRepository AdministradorEquipos { get; }
         IAdministradorLineaRepository AdministradorLineas { get; }
-        ICentroAtencionRepository CentroAtencion { get; }
+        ICentroAtencionRepository CentroAtencions { get; }
         IClienteRepository Clientes { get; }
         IContratoRepository Contratos { get; }
         IDireccionRepository Direccions { get; }

@@ -1,4 +1,3 @@
-C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\2013100788-PER.csprojResolveAssemblyReference.cache
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\2013100788-PER.dll.config
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\2013100788-PER.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\2013100788-PER.pdb
@@ -8,7 +7,8 @@ C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\EntityFramework.
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\2013100788-ENT.pdb
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\EntityFramework.xml
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\2013100788-PER.csprojResolveAssemblyReference.cache
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\_2013100788_PER.Migrations.lol.resources
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\2013100788-PER.csproj.GenerateResource.Cache
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\2013100788-PER.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\2013100788-PER.pdb
-C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\_2013100788_PER.Migrations.lul.resources
-C:\Users\Javier\Desktop\2013100788-LC2\2013100788-PER\obj\Debug\2013100788-PER.csproj.GenerateResource.Cache

@@ -1,0 +1,99 @@
+﻿@model _2013100788_ENT.Entities.Venta
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CentroAtencion.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CentroAtencion.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contrato.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contrato.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evaluacion.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evaluacion.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaTelefonica.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaTelefonica.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClienteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContratoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContratoId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VentaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

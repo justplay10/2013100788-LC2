@@ -46,12 +46,12 @@ namespace _2013100788_PER.Repositories
             return _Context.Set<TEntity>().ToList();
         }
 
-        public void Remove(TEntity entity)
+        public void Delete(TEntity entity)
         {
             _Context.Set<TEntity>().Remove(entity);
         }
 
-        public void RemoveRange(IEnumerable<TEntity> entities)
+        public void DeleteRange(IEnumerable<TEntity> entities)
         {
             _Context.Set<TEntity>().RemoveRange(entities);
         }

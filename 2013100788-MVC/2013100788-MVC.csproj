@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8F1D415F-C64B-4785-A4CC-64DF7CE71C6C}</ProjectGuid>
+    <ProjectGuid>{FE65D3F2-4149-4691-9457-7B5F5178362F}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -51,42 +51,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject.Web, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.3.2.1.0\lib\net45-full\Ninject.Web.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -182,9 +158,23 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWeb.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdministradorEquipoesController.cs" />
+    <Compile Include="Controllers\AdministradorLineasController.cs" />
+    <Compile Include="Controllers\CentroAtencionsController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ContratoesController.cs" />
+    <Compile Include="Controllers\DireccionsController.cs" />
+    <Compile Include="Controllers\EquipoCelularsController.cs" />
+    <Compile Include="Controllers\EstadoEvaluacionsController.cs" />
+    <Compile Include="Controllers\EvaluacionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LineaTelefonicasController.cs" />
+    <Compile Include="Controllers\TrabajadorsController.cs" />
+    <Compile Include="Controllers\UbigeosController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -225,6 +215,71 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Create.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Delete.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Details.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Edit.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Index.cshtml" />
+    <Content Include="Views\AdministradorLineas\Create.cshtml" />
+    <Content Include="Views\AdministradorLineas\Delete.cshtml" />
+    <Content Include="Views\AdministradorLineas\Details.cshtml" />
+    <Content Include="Views\AdministradorLineas\Edit.cshtml" />
+    <Content Include="Views\AdministradorLineas\Index.cshtml" />
+    <Content Include="Views\CentroAtencions\Create.cshtml" />
+    <Content Include="Views\CentroAtencions\Delete.cshtml" />
+    <Content Include="Views\CentroAtencions\Details.cshtml" />
+    <Content Include="Views\CentroAtencions\Edit.cshtml" />
+    <Content Include="Views\CentroAtencions\Index.cshtml" />
+    <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Clientes\Delete.cshtml" />
+    <Content Include="Views\Clientes\Details.cshtml" />
+    <Content Include="Views\Clientes\Edit.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Contratoes\Create.cshtml" />
+    <Content Include="Views\Contratoes\Delete.cshtml" />
+    <Content Include="Views\Contratoes\Details.cshtml" />
+    <Content Include="Views\Contratoes\Edit.cshtml" />
+    <Content Include="Views\Contratoes\Index.cshtml" />
+    <Content Include="Views\Direccions\Create.cshtml" />
+    <Content Include="Views\Direccions\Delete.cshtml" />
+    <Content Include="Views\Direccions\Details.cshtml" />
+    <Content Include="Views\Direccions\Edit.cshtml" />
+    <Content Include="Views\Direccions\Index.cshtml" />
+    <Content Include="Views\EquipoCelulars\Create.cshtml" />
+    <Content Include="Views\EquipoCelulars\Delete.cshtml" />
+    <Content Include="Views\EquipoCelulars\Details.cshtml" />
+    <Content Include="Views\EquipoCelulars\Edit.cshtml" />
+    <Content Include="Views\EquipoCelulars\Index.cshtml" />
+    <Content Include="Views\EstadoEvaluacions\Create.cshtml" />
+    <Content Include="Views\EstadoEvaluacions\Delete.cshtml" />
+    <Content Include="Views\EstadoEvaluacions\Details.cshtml" />
+    <Content Include="Views\EstadoEvaluacions\Edit.cshtml" />
+    <Content Include="Views\EstadoEvaluacions\Index.cshtml" />
+    <Content Include="Views\Evaluacions\Create.cshtml" />
+    <Content Include="Views\Evaluacions\Delete.cshtml" />
+    <Content Include="Views\Evaluacions\Details.cshtml" />
+    <Content Include="Views\Evaluacions\Edit.cshtml" />
+    <Content Include="Views\Evaluacions\Index.cshtml" />
+    <Content Include="Views\LineaTelefonicas\Create.cshtml" />
+    <Content Include="Views\LineaTelefonicas\Delete.cshtml" />
+    <Content Include="Views\LineaTelefonicas\Details.cshtml" />
+    <Content Include="Views\LineaTelefonicas\Edit.cshtml" />
+    <Content Include="Views\LineaTelefonicas\Index.cshtml" />
+    <Content Include="Views\Trabajadors\Create.cshtml" />
+    <Content Include="Views\Trabajadors\Delete.cshtml" />
+    <Content Include="Views\Trabajadors\Details.cshtml" />
+    <Content Include="Views\Trabajadors\Edit.cshtml" />
+    <Content Include="Views\Trabajadors\Index.cshtml" />
+    <Content Include="Views\Ubigeos\Create.cshtml" />
+    <Content Include="Views\Ubigeos\Delete.cshtml" />
+    <Content Include="Views\Ubigeos\Details.cshtml" />
+    <Content Include="Views\Ubigeos\Edit.cshtml" />
+    <Content Include="Views\Ubigeos\Index.cshtml" />
+    <Content Include="Views\Ventas\Create.cshtml" />
+    <Content Include="Views\Ventas\Delete.cshtml" />
+    <Content Include="Views\Ventas\Details.cshtml" />
+    <Content Include="Views\Ventas\Edit.cshtml" />
+    <Content Include="Views\Ventas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +300,16 @@
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2013100788-ENT\2013100788-ENT.csproj">
+      <Project>{0bc82b54-7db0-4d30-97ce-d495ab2955e6}</Project>
+      <Name>2013100788-ENT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\2013100788-PER\2013100788-PER.csproj">
+      <Project>{2a6ab395-5be5-4b31-9a79-ac07c1196038}</Project>
+      <Name>2013100788-PER</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -261,7 +326,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51263</DevelopmentServerPort>
+          <DevelopmentServerPort>49596</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:51263/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

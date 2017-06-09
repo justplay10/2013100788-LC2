@@ -18,6 +18,7 @@ namespace _2013100788_PER.EntityTypeConfigurations
             HasRequired(e => e.Ventas);
             HasRequired(e => e.Trabajador);
             HasRequired(e => e.CentroAtencion);
+            HasRequired(e => e.EquipoCelular);
         }
     }
 }
