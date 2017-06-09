@@ -42,6 +42,9 @@ C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Microsoft.ApplicationI
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Newtonsoft.Json.dll
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Ninject.dll
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Ninject.Web.Common.dll
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Ninject.Web.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Helpers.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Mvc.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Optimization.dll
@@ -49,6 +52,7 @@ C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Razor.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.WebPages.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\WebActivatorEx.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\WebGrease.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\2013100788-ENT.pdb
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\2013100788-PER.pdb
@@ -56,6 +60,9 @@ C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\2013100788-PER.dll.con
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\EntityFramework.xml
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\EntityFramework.SqlServer.xml
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Ninject.xml
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Ninject.Web.xml
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\Ninject.Web.Common.xml
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Helpers.xml
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Mvc.xml
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-MVC\bin\System.Web.Optimization.xml
