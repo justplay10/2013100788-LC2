@@ -17,6 +17,10 @@ namespace _2013100788_MVC.Controllers
     {
         //private LineasNuevasContext db = new LineasNuevasContext();
         private readonly IUnityOfWork _UnityOfWork;
+        public VentasController(IUnityOfWork unityOfWork)
+        {
+            _UnityOfWork = unityOfWork;
+        }
         // GET: Ventas
         public ActionResult Index()
         {
