@@ -10,15 +10,18 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("Evaluacions")
             .HasKey(e => e.EvalId);
-            //Property(e => e.EvalId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(e => e.EvalId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(e => e.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            HasRequired(e => e.Ventas);
+           
             HasRequired(e => e.Trabajador);
             HasRequired(e => e.CentroAtencion);
             HasRequired(e => e.EquipoCelular);
+            HasRequired(e => e.EstadoEvaluacion);
+            HasRequired(c => c.Cliente);
+            HasRequired(e => e.LineaTelefonica);            
         }
     }
 }

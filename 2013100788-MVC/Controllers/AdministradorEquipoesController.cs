@@ -53,7 +53,7 @@ namespace _2013100788_MVC.Controllers
         // GET: AdministradorEquipoes/Create
         public ActionResult Create()
         {
-           ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip");
+            ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip");
             return View();
         }
 
@@ -73,7 +73,7 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-           ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", administradorEquipo.EquipCelId);
+            ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", administradorEquipo.EquipCelId);
             return View(administradorEquipo);
         }
 

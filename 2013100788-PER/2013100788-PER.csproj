@@ -61,9 +61,9 @@
     <Compile Include="EntityTypeConfigurations\TrabajadorConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\UbigeoConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\VentaConfiguration.cs" />
-    <Compile Include="Migrations\201706090556376_lol.cs" />
-    <Compile Include="Migrations\201706090556376_lol.Designer.cs">
-      <DependentUpon>201706090556376_lol.cs</DependentUpon>
+    <Compile Include="Migrations\201706100618569_prueba.cs" />
+    <Compile Include="Migrations\201706100618569_prueba.Designer.cs">
+      <DependentUpon>201706100618569_prueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,8 +94,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706090556376_lol.resx">
-      <DependentUpon>201706090556376_lol.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706100618569_prueba.resx">
+      <DependentUpon>201706100618569_prueba.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

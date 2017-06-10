@@ -1,6 +1,5 @@
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-CON\bin\Debug\2013100788-CON.exe.config
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-CON\bin\Debug\2013100788-CON.exe
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-CON\bin\Debug\2013100788-CON.pdb
-C:\Users\Javier\Desktop\2013100788-LC2\2013100788-CON\obj\Debug\2013100788-CON.csprojResolveAssemblyReference.cache
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-CON\obj\Debug\2013100788-CON.exe
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-CON\obj\Debug\2013100788-CON.pdb

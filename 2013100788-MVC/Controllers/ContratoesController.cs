@@ -46,7 +46,6 @@ namespace _2013100788_MVC.Controllers
         // GET: Contratoes/Create
         public ActionResult Create()
         {
-            ViewBag.ContratoId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc");
             return View();
         }
 
@@ -64,7 +63,6 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ContratoId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc", contrato.ContratoId);
             return View(contrato);
         }
 
@@ -80,7 +78,6 @@ namespace _2013100788_MVC.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ContratoId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc", contrato.ContratoId);
             return View(contrato);
         }
 
@@ -97,8 +94,7 @@ namespace _2013100788_MVC.Controllers
                 _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ContratoId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc", contrato.ContratoId);
-            return View(contrato);
+                return View(contrato);
         }
 
         // GET: Contratoes/Delete/5

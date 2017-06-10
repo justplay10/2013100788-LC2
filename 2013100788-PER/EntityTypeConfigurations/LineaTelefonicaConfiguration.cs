@@ -13,16 +13,15 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("LineaTelefonicas")
            .HasKey(l => l.LinTelfId);
-            //Property(l => l.LinTelfId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(l => l.LinTelfId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(l => l.desc)
                 .IsRequired()
                 .HasMaxLength(255);
             HasMany(l => l.AdministradorLineas)
                 .WithRequired(t => t.LineaTelefonica)
                 .HasForeignKey(t => t.LinTelfId);
-            HasRequired(l => l.Evaluacions);
-            HasMany(l => l.Ventas);
+
         }
     }
 }

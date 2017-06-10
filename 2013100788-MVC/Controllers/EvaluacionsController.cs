@@ -47,12 +47,11 @@ namespace _2013100788_MVC.Controllers
         public ActionResult Create()
         {
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc");
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre");
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip");
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc");
-            ViewBag.EvalId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc");
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre");
+            ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip");
+            ViewBag.EstEvaId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc");
+            ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc");
             ViewBag.TrabaId = new SelectList(_UnityOfWork.Trabajadors.GetEntity(), "TrabaId", "desc");
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc");
             return View();
         }
 
@@ -71,12 +70,11 @@ namespace _2013100788_MVC.Controllers
             }
 
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", evaluacion.CenAteId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", evaluacion.EvalId);
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", evaluacion.EvalId);
+            ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", evaluacion.EvalId);
+            ViewBag.EstEvaId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc", evaluacion.EvalId);
+            ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", evaluacion.EvalId);
             ViewBag.TrabaId = new SelectList(_UnityOfWork.Trabajadors.GetEntity(), "TrabaId", "desc", evaluacion.TrabaId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc", evaluacion.EvalId);
             return View(evaluacion);
         }
 
@@ -93,12 +91,11 @@ namespace _2013100788_MVC.Controllers
                 return HttpNotFound();
             }
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", evaluacion.CenAteId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", evaluacion.EvalId);
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", evaluacion.EvalId);
+            ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", evaluacion.EvalId);
+            ViewBag.EstEvaId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc", evaluacion.EvalId);
+            ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", evaluacion.EvalId);
             ViewBag.TrabaId = new SelectList(_UnityOfWork.Trabajadors.GetEntity(), "TrabaId", "desc", evaluacion.TrabaId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc", evaluacion.EvalId);
             return View(evaluacion);
         }
 
@@ -116,12 +113,11 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", evaluacion.CenAteId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc", evaluacion.EvalId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", evaluacion.EvalId);
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", evaluacion.EvalId);
+            ViewBag.EquipCelId = new SelectList(_UnityOfWork.EquipoCelulars.GetEntity(), "EquipCelId", "descrip", evaluacion.EvalId);
+            ViewBag.EstEvaId = new SelectList(_UnityOfWork.EstadoEvaluacions.GetEntity(), "EstEvaId", "desc", evaluacion.EvalId);
+            ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", evaluacion.EvalId);
             ViewBag.TrabaId = new SelectList(_UnityOfWork.Trabajadors.GetEntity(), "TrabaId", "desc", evaluacion.TrabaId);
-            ViewBag.EvalId = new SelectList(_UnityOfWork.Ventas.GetEntity(), "VentaId", "desc", evaluacion.EvalId);
             return View(evaluacion);
         }
 

@@ -13,6 +13,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Direccion.desc)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.desc)
         </th>
         <th></th>
@@ -20,6 +23,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion.desc)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.desc)
         </td>

@@ -10,13 +10,12 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("Clientes")
             .HasKey(c => c.ClienteId);
-            //Property(c => c.ClienteId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(c => c.ClienteId)
+               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.Nombre)
                 .IsRequired()
                 .HasMaxLength(100);
-            HasRequired(c => c.Evaluacions);
-            HasRequired(c => c.Ventas);
+
         }
     }
 }

@@ -12,8 +12,6 @@ namespace _2013100788_ENT.Entities
         public string desc { get; set; }
         public int LinTelfId { get; set; }
         public LineaTelefonica LineaTelefonica { get; set; }
-        public int EvalId { get; set; }
-        public Evaluacion Evaluacion { get; set; }
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
         public TipoPago TipoPago { get; set; }
@@ -21,5 +19,7 @@ namespace _2013100788_ENT.Entities
         public Contrato Contrato { get; set; }
         public int CenAteId { get; set; }
         public CentroAtencion CentroAtencion { get; set; }
+        public int EvalId { get; set; }
+        public Evaluacion Evaluacion { get; set; }
     }
 }

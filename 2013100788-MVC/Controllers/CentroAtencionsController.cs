@@ -8,7 +8,6 @@ using System.Web;
 using System.Web.Mvc;
 using _2013100788_ENT.Entities;
 using _2013100788_PER;
-using _2013100788_PER.Repositories;
 using _2013100788_ENT.IRepositories;
 
 namespace _2013100788_MVC.Controllers
@@ -17,7 +16,6 @@ namespace _2013100788_MVC.Controllers
     {
         //private LineasNuevasContext db = new LineasNuevasContext();
         private readonly IUnityOfWork _UnityOfWork;
-
         public CentroAtencionsController(IUnityOfWork unityOfWork)
         {
             _UnityOfWork = unityOfWork;
@@ -25,6 +23,7 @@ namespace _2013100788_MVC.Controllers
         // GET: CentroAtencions
         public ActionResult Index()
         {
+            //var centroAtencions = db.CentroAtencions.Include(c => c.Direccion);
             return View(_UnityOfWork.CentroAtencions.GetAll());
         }
 
@@ -46,6 +45,7 @@ namespace _2013100788_MVC.Controllers
         // GET: CentroAtencions/Create
         public ActionResult Create()
         {
+            ViewBag.DirId = new SelectList(_UnityOfWork.Direccions.GetEntity(), "DirId", "desc");
             return View();
         }
 
@@ -54,7 +54,7 @@ namespace _2013100788_MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CenAteId,desc")] CentroAtencion centroAtencion)
+        public ActionResult Create([Bind(Include = "CenAteId,desc,DirId")] CentroAtencion centroAtencion)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +63,7 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.DirId = new SelectList(_UnityOfWork.Direccions.GetEntity(), "DirId", "desc", centroAtencion.DirId);
             return View(centroAtencion);
         }
 
@@ -78,6 +79,7 @@ namespace _2013100788_MVC.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DirId = new SelectList(_UnityOfWork.Direccions.GetEntity(), "DirId", "desc", centroAtencion.DirId);
             return View(centroAtencion);
         }
 
@@ -86,7 +88,7 @@ namespace _2013100788_MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CenAteId,desc")] CentroAtencion centroAtencion)
+        public ActionResult Edit([Bind(Include = "CenAteId,desc,DirId")] CentroAtencion centroAtencion)
         {
             if (ModelState.IsValid)
             {
@@ -94,6 +96,7 @@ namespace _2013100788_MVC.Controllers
                 _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.DirId = new SelectList(_UnityOfWork.Direccions.GetEntity(), "DirId", "desc", centroAtencion.DirId);
             return View(centroAtencion);
         }
 

@@ -13,7 +13,7 @@ namespace _2013100788_ENT.Entities
         public string descrip { get; set; }
 
         public ICollection<AdministradorEquipo> AdministradorEquipos { get; set; }
-        public List<Evaluacion> Evaluacions { get; set; }
+        public ICollection<Evaluacion> Evaluacions { get; set; }
 
         public EquipoCelular()
         {

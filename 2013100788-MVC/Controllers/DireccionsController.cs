@@ -46,8 +46,8 @@ namespace _2013100788_MVC.Controllers
         // GET: Direccions/Create
         public ActionResult Create()
         {
-            ViewBag.DirId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc");
-            ViewBag.DirId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc");
+            ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc");
+            ViewBag.UbigeoId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc");
             return View();
         }
 
@@ -65,8 +65,8 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DirId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", direccion.DirId);
-            ViewBag.DirId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc", direccion.DirId);
+            ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", direccion.DirId);
+            ViewBag.UbigeoId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc", direccion.DirId);
             return View(direccion);
         }
 
@@ -82,8 +82,8 @@ namespace _2013100788_MVC.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.DirId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", direccion.DirId);
-            ViewBag.DirId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc", direccion.DirId);
+            ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", direccion.DirId);
+            ViewBag.UbigeoId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc", direccion.DirId);
             return View(direccion);
         }
 
@@ -100,8 +100,8 @@ namespace _2013100788_MVC.Controllers
                 _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DirId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", direccion.DirId);
-            ViewBag.DirId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc", direccion.DirId);
+            ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", direccion.DirId);
+            ViewBag.UbigeoId = new SelectList(_UnityOfWork.Ubigeos.GetEntity(), "UbigeoId", "desc", direccion.DirId);
             return View(direccion);
         }
 

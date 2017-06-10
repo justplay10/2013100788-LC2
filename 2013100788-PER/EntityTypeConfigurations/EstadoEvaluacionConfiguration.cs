@@ -16,7 +16,7 @@ namespace _2013100788_PER.EntityTypeConfigurations
             Property(e => e.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            HasRequired(e => e.Evaluacions);
+          
         }
     }
 }

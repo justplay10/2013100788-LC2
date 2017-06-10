@@ -46,7 +46,7 @@ namespace _2013100788_MVC.Controllers
         // GET: LineaTelefonicas/Create
         public ActionResult Create()
         {
-            ViewBag.LinTelfId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc");
+
             return View();
         }
 
@@ -63,8 +63,6 @@ namespace _2013100788_MVC.Controllers
                 _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.LinTelfId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", lineaTelefonica.LinTelfId);
             return View(lineaTelefonica);
         }
 
@@ -80,7 +78,6 @@ namespace _2013100788_MVC.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LinTelfId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", lineaTelefonica.LinTelfId);
             return View(lineaTelefonica);
         }
 
@@ -97,7 +94,6 @@ namespace _2013100788_MVC.Controllers
                 _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.LinTelfId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", lineaTelefonica.LinTelfId);
             return View(lineaTelefonica);
         }
 

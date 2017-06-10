@@ -10,12 +10,12 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("Direccions")
             .HasKey(d => d.DirId);
-            //Property(d => d.DirId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(d => d.DirId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(d => d.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            HasRequired(d => d.CentroAtencions);
+            HasRequired(d => d.Ubigeo);
         }
     }
 }

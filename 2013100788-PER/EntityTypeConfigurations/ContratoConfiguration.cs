@@ -10,12 +10,12 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("Contratos")
             .HasKey(c => c.ContratoId);
-            //Property(c => c.ContratoId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(c => c.ContratoId)
+               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(c => c.desc)
                 .IsRequired()
                 .HasMaxLength(255);
-            HasRequired(c => c.Ventas);
+
         } 
     }
 }

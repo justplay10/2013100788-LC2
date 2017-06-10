@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _2013100788_PER.EntityTypeConfigurations
 {
@@ -14,6 +15,8 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("AdministradorEquipos")
             .HasKey(a => a.AdmiEquipId);
+            Property(a => a.AdmiEquipId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(a => a.desc)
                 .IsRequired()

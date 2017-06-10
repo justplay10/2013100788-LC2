@@ -21,6 +21,7 @@ namespace _2013100788_ENT.IRepositories
         ITrabajadorRepository Trabajadors { get; }
         IUbigeoRepository Ubigeos { get; }
         IVentaRepository Ventas { get; }
+
         int SaveChanges();
 
         void StateModified(object entity);

@@ -10,8 +10,8 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("EquipoCelulars")
             .HasKey(e => e.EquipCelId);
-            //Property(e => e.EquipCelId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(e => e.EquipCelId)
+               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(e => e.descrip)
                 .IsRequired()
                 .HasMaxLength(255);

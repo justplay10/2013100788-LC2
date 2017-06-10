@@ -11,8 +11,7 @@ namespace _2013100788_PER.Repositories
 
     {
         private readonly LineasNuevasContext _Context;
-        private static UnityOfWork _Instance;
-        private static readonly object _Lock = new object();
+
         public IAdministradorEquipoRepository AdministradorEquipos { get; private set; }
 
         public IAdministradorLineaRepository AdministradorLineas { get; private set; }
@@ -38,10 +37,13 @@ namespace _2013100788_PER.Repositories
 
         public IVentaRepository Ventas { get; private set; }
 
-
-        private UnityOfWork()
+        public UnityOfWork()
         {
-            _Context = new LineasNuevasContext();
+
+        }
+        public UnityOfWork(LineasNuevasContext context)
+        {
+            _Context = context;
 
             AdministradorEquipos = new AdministradorEquipoRepository(_Context);
             AdministradorLineas = new AdministradorLineaRepository(_Context);
@@ -58,18 +60,6 @@ namespace _2013100788_PER.Repositories
             Ventas = new VentaRepository(_Context);
         }
 
-        public static UnityOfWork Instance
-        {
-            get
-            {
-                lock (_Lock)
-                {
-                    if (_Instance == null)
-                        _Instance = new UnityOfWork();
-                }
-                return _Instance;
-            }
-        }
         public void Dispose()
         {
             _Context.Dispose();

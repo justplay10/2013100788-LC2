@@ -47,7 +47,7 @@ namespace _2013100788_MVC.Controllers
         // GET: EquipoCelulars/Create
         public ActionResult Create()
         {
-            ViewBag.EquipCelId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc");
+
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.EquipCelId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", equipoCelular.EquipCelId);
+
             return View(equipoCelular);
         }
 
@@ -83,7 +83,6 @@ namespace _2013100788_MVC.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.EquipCelId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", equipoCelular.EquipCelId);
             return View(equipoCelular);
         }
 
@@ -102,7 +101,6 @@ namespace _2013100788_MVC.Controllers
                 _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.EquipCelId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", equipoCelular.EquipCelId);
             return View(equipoCelular);
         }
 

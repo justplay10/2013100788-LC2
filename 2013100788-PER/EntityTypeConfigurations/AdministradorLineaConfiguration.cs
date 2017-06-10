@@ -12,8 +12,8 @@ namespace _2013100788_PER.EntityTypeConfigurations
         {
             ToTable("AdministradorLineas")
             .HasKey(a => a.AdmiLinId);
-            //Property(a => a.AdmiLinId)
-            //    .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(a => a.AdmiLinId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(a => a.desc)
                 .IsRequired()
                 .HasMaxLength(255);

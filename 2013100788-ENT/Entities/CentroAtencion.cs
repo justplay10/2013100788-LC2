@@ -10,6 +10,8 @@ namespace _2013100788_ENT.Entities
     {
         public int CenAteId { get; set; }
         public string desc { get; set; }
+        public int DirId { get; set; }
+        public Direccion Direccion { get; set; }
 
     }
 }

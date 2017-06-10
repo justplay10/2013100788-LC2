@@ -8,14 +8,13 @@ using System.Web;
 using System.Web.Mvc;
 using _2013100788_ENT.Entities;
 using _2013100788_PER;
-using _2013100788_PER.Repositories;
 using _2013100788_ENT.IRepositories;
 
 namespace _2013100788_MVC.Controllers
 {
     public class VentasController : Controller
     {
-        //private LineasNuevasContext db = new LineasNuevasContext();
+        //        private LineasNuevasContext db = new LineasNuevasContext();
         private readonly IUnityOfWork _UnityOfWork;
         public VentasController(IUnityOfWork unityOfWork)
         {
@@ -24,7 +23,7 @@ namespace _2013100788_MVC.Controllers
         // GET: Ventas
         public ActionResult Index()
         {
-            //var ventas = db.Ventas.Include(v => v.CentroAtencion).Include(v => v.Cliente).Include(v => v.Contrato).Include(v => v.Evaluacion).Include(v => v.LineaTelefonica);
+           // var ventas = db.Ventas.Include(v => v.CentroAtencion).Include(v => v.Cliente).Include(v => v.Contrato).Include(v => v.Evaluacion).Include(v => v.LineaTelefonica);
             return View(_UnityOfWork.Ventas.GetAll());
         }
 
@@ -47,9 +46,9 @@ namespace _2013100788_MVC.Controllers
         public ActionResult Create()
         {
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc");
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre");
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc");
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc");
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre");
+            ViewBag.ContratoId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc");
+            ViewBag.EvalId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc");
             ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc");
             return View();
         }
@@ -59,7 +58,7 @@ namespace _2013100788_MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VentaId,desc,LinTelfId,EvalId,ClienteId,TipoPago,ContratoId,CenAteId")] Venta venta)
+        public ActionResult Create([Bind(Include = "VentaId,desc,LinTelfId,ClienteId,TipoPago,ContratoId,CenAteId,EvalId")] Venta venta)
         {
             if (ModelState.IsValid)
             {
@@ -69,9 +68,9 @@ namespace _2013100788_MVC.Controllers
             }
 
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", venta.CenAteId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", venta.VentaId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc", venta.VentaId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", venta.VentaId);
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", venta.ClienteId);
+            ViewBag.ContratoId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc", venta.ContratoId);
+            ViewBag.EvalId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", venta.EvalId);
             ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", venta.LinTelfId);
             return View(venta);
         }
@@ -89,9 +88,9 @@ namespace _2013100788_MVC.Controllers
                 return HttpNotFound();
             }
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", venta.CenAteId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", venta.VentaId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc", venta.VentaId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", venta.VentaId);
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", venta.ClienteId);
+            ViewBag.ContratoId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc", venta.ContratoId);
+            ViewBag.EvalId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", venta.EvalId);
             ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", venta.LinTelfId);
             return View(venta);
         }
@@ -101,7 +100,7 @@ namespace _2013100788_MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VentaId,desc,LinTelfId,EvalId,ClienteId,TipoPago,ContratoId,CenAteId")] Venta venta)
+        public ActionResult Edit([Bind(Include = "VentaId,desc,LinTelfId,ClienteId,TipoPago,ContratoId,CenAteId,EvalId")] Venta venta)
         {
             if (ModelState.IsValid)
             {
@@ -110,9 +109,9 @@ namespace _2013100788_MVC.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CenAteId = new SelectList(_UnityOfWork.CentroAtencions.GetEntity(), "CenAteId", "desc", venta.CenAteId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", venta.VentaId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc", venta.VentaId);
-            ViewBag.VentaId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", venta.VentaId);
+            ViewBag.ClienteId = new SelectList(_UnityOfWork.Clientes.GetEntity(), "ClienteId", "Nombre", venta.ClienteId);
+            ViewBag.ContratoId = new SelectList(_UnityOfWork.Contratos.GetEntity(), "ContratoId", "desc", venta.ContratoId);
+            ViewBag.EvalId = new SelectList(_UnityOfWork.Evaluacions.GetEntity(), "EvalId", "desc", venta.EvalId);
             ViewBag.LinTelfId = new SelectList(_UnityOfWork.LineaTelefonicas.GetEntity(), "LinTelfId", "desc", venta.LinTelfId);
             return View(venta);
         }
