@@ -24,8 +24,9 @@ namespace _2013100788_MVC.Controllers
         // GET: Evaluacions
         public ActionResult Index()
         {
-            //var evaluacions = db.Evaluacions.Include(e => e.CentroAtencion).Include(e => e.Cliente).Include(e => e.EquipoCelular).Include(e => e.EstadoEvaluacion).Include(e => e.LineaTelefonica).Include(e => e.Trabajador).Include(e => e.Ventas);
-            return View(_UnityOfWork.Evaluacions.GetAll());
+            var evaluacions = _UnityOfWork.Evaluacions.GetEntity().Include(e => e.CentroAtencion).Include(e => e.Cliente).Include(e => e.EquipoCelular)
+                                .Include(e => e.EstadoEvaluacion).Include(e => e.LineaTelefonica).Include(e => e.Trabajador);
+            return View(evaluacions.ToList());
         }
 
         // GET: Evaluacions/Details/5

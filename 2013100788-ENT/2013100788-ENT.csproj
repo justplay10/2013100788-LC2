@@ -40,6 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntitiesDTO\AdministradorEquipoDTO.cs" />
+    <Compile Include="EntitiesDTO\AdministradorLineaDTO.cs" />
+    <Compile Include="EntitiesDTO\CentroAtencionDTO.cs" />
+    <Compile Include="EntitiesDTO\ClienteDTO.cs" />
+    <Compile Include="EntitiesDTO\ContratoDTO.cs" />
+    <Compile Include="EntitiesDTO\DireccionDTO.cs" />
+    <Compile Include="EntitiesDTO\EquipoCelularDTO.cs" />
+    <Compile Include="EntitiesDTO\EstadoEvaluacionDTO.cs" />
+    <Compile Include="EntitiesDTO\EvaluacionDTO.cs" />
+    <Compile Include="EntitiesDTO\LineaTelefonicaDTO.cs" />
+    <Compile Include="EntitiesDTO\TrabajadorDTO.cs" />
+    <Compile Include="EntitiesDTO\UbigeoDTO.cs" />
+    <Compile Include="EntitiesDTO\VentaDTO.cs" />
     <Compile Include="Entities\AdministradorEquipo.cs" />
     <Compile Include="Entities\AdministradorLinea.cs" />
     <Compile Include="Entities\CentroAtencion.cs" />

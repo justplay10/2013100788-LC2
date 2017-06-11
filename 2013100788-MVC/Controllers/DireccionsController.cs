@@ -24,8 +24,8 @@ namespace _2013100788_MVC.Controllers
         // GET: Direccions
         public ActionResult Index()
         {
-            //var direccions = db.Direccions.Include(d => d.CentroAtencions).Include(d => d.Ubigeo);
-            return View(_UnityOfWork.Direccions.GetAll());
+            var direccions = _UnityOfWork.Direccions.GetEntity().Include(d => d.Ubigeo);
+            return View(direccions.ToList());
         }
 
         // GET: Direccions/Details/5

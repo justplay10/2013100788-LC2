@@ -23,8 +23,8 @@ namespace _2013100788_MVC.Controllers
         // GET: CentroAtencions
         public ActionResult Index()
         {
-            //var centroAtencions = db.CentroAtencions.Include(c => c.Direccion);
-            return View(_UnityOfWork.CentroAtencions.GetAll());
+            var centroAtencions = _UnityOfWork.CentroAtencions.GetEntity().Include(c => c.Direccion);
+            return View(centroAtencions.ToList());
         }
 
         // GET: CentroAtencions/Details/5

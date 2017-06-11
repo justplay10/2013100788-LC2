@@ -25,8 +25,8 @@ namespace _2013100788_MVC.Controllers
         // GET: AdministradorLineas
         public ActionResult Index()
         {
-            //var administradorLineas = db.AdministradorLineas.Include(a => a.LineaTelefonica);
-            return View(_UnityOfWork.AdministradorLineas.GetAll());
+            var administradorLineas = _UnityOfWork.AdministradorLineas.GetEntity().Include(a => a.LineaTelefonica);
+            return View(administradorLineas.ToList());
         }
 
         // GET: AdministradorLineas/Details/5

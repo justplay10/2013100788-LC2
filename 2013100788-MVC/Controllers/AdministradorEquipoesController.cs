@@ -29,9 +29,9 @@ namespace _2013100788_MVC.Controllers
         // GET: AdministradorEquipoes
         public ActionResult Index()
         {
-            //var unityOfWork = db.AdministradorEquipos.Include(a => a.EquipoCelular);
-            //return View(administradorEquipos.ToList());
-            return View(_UnityOfWork.AdministradorEquipos.GetAll());
+            var administradorEquipos = _UnityOfWork.AdministradorEquipos.GetEntity().Include(a => a.EquipoCelular);
+            return View(administradorEquipos.ToList());
+    
         }
 
         // GET: AdministradorEquipoes/Details/5

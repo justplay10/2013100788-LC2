@@ -23,8 +23,8 @@ namespace _2013100788_MVC.Controllers
         // GET: Ventas
         public ActionResult Index()
         {
-           // var ventas = db.Ventas.Include(v => v.CentroAtencion).Include(v => v.Cliente).Include(v => v.Contrato).Include(v => v.Evaluacion).Include(v => v.LineaTelefonica);
-            return View(_UnityOfWork.Ventas.GetAll());
+           var ventas = _UnityOfWork.Ventas.GetEntity().Include(v => v.CentroAtencion).Include(v => v.Cliente).Include(v => v.Contrato).Include(v => v.Evaluacion).Include(v => v.LineaTelefonica);
+            return View(ventas.ToList());
         }
 
         // GET: Ventas/Details/5
