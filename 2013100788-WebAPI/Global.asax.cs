@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using AutoMapper;
-using _2013100788_WebAPI.App_Start
+using _2013100788_WebAPI.App_Start;
 
 namespace _2013100788_WebAPI
 {
