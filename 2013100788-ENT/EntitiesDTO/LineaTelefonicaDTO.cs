@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _2013100788_ENT.EntitiesDTO
 {
-    class LineaTelefonicaDTO
+    public class LineaTelefonicaDTO
     {
         public int LinTelfId { get; set; }
         public string desc { get; set; }

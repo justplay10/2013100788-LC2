@@ -10,6 +10,9 @@ namespace _2013100788_WebAPI.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using _2013100788_ENT.IRepositories;
+    using _2013100788_PER.Repositories;
+    using _2013100788_PER;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +64,22 @@ namespace _2013100788_WebAPI.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            kernel.Bind<IUnityOfWork>().To<UnityOfWork>();
+            kernel.Bind<LineasNuevasContext>().To<LineasNuevasContext>();
+
+            kernel.Bind<IAdministradorEquipoRepository>().To<AdministradorEquipoRepository>();
+            kernel.Bind<IAdministradorLineaRepository>().To<AdministradorLineaRepository>();
+            kernel.Bind<ICentroAtencionRepository>().To<CentroAtencionRepository>();
+            kernel.Bind<IClienteRepository>().To<ClienteRepository>();
+            kernel.Bind<IContratoRepository>().To<ContratoRepository>();
+            kernel.Bind<IDireccionRepository>().To<DireccionRepository>();
+            kernel.Bind<IEquipoCelularRepository>().To<EquipoCelularRepository>();
+            kernel.Bind<IEstadoEvaluacionRepository>().To<EstadoEvaluacionRepository>();
+            kernel.Bind<IEvaluacionRepository>().To<EvaluacionRepository>();
+            kernel.Bind<ILineaTelefonicaRepository>().To<LineaTelefonicaRepository>();
+            kernel.Bind<ITrabajadorRepository>().To<TrabajadorRepository>();
+            kernel.Bind<IUbigeoRepository>().To<UbigeoRepository>();
+            kernel.Bind<IVentaRepository>().To<VentaRepository>();
+        }
     }
 }

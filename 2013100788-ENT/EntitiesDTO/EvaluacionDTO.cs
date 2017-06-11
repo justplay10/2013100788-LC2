@@ -7,7 +7,7 @@ using _2013100788_ENT.Entities;
 
 namespace _2013100788_ENT.EntitiesDTO
 {
-    class EvaluacionDTO
+    public class EvaluacionDTO
     {
         public int EvalId { get; set; }
         public string desc { get; set; }

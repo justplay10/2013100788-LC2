@@ -1,4 +1,5 @@
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-ENT\bin\Debug\2013100788-ENT.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-ENT\bin\Debug\2013100788-ENT.pdb
+C:\Users\Javier\Desktop\2013100788-LC2\2013100788-ENT\obj\Debug\2013100788-ENT.csprojResolveAssemblyReference.cache
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-ENT\obj\Debug\2013100788-ENT.dll
 C:\Users\Javier\Desktop\2013100788-LC2\2013100788-ENT\obj\Debug\2013100788-ENT.pdb

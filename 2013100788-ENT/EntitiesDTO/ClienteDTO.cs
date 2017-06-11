@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2013100788_ENT.EntitiesDTO
 {
-    class ClienteDTO
+    public class ClienteDTO
     {
         public int ClienteId { get; set; }
         public string Nombre { get; set; }

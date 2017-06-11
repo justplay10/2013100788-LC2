@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2013100788_ENT.EntitiesDTO
 {
-    class ContratoDTO
+    public class ContratoDTO
     {
         public int ContratoId { get; set; }
         public string desc { get; set; }

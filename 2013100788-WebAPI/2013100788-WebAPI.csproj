@@ -167,6 +167,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MappingProfile.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -198,6 +199,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AdministradorEquipoesApiController.cs" />
+    <Compile Include="Controllers\AdministradorLineasApiController.cs" />
+    <Compile Include="Controllers\CentroAtencionsApiController.cs" />
+    <Compile Include="Controllers\ClientesApiController.cs" />
+    <Compile Include="Controllers\ContratoesApiController.cs" />
+    <Compile Include="Controllers\DireccionsApiController.cs" />
+    <Compile Include="Controllers\EquipoCelularsApiController.cs" />
+    <Compile Include="Controllers\EstadoEvaluacionsApiController.cs" />
+    <Compile Include="Controllers\EvaluacionsApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -268,6 +278,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Create.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Delete.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Details.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Edit.cshtml" />
+    <Content Include="Views\AdministradorEquipoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
